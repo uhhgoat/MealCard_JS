@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<!--Matyas Fenyves-->
+<html>
+	<head>
+		<title>Meal Card</title>
+		<script type="text/javascript">
+			image = "goldx.png" ;
+			image2 = "goldcheck.png"
+			selection = image ;
+			selection2 = image ;
+			selection3 = image ;
+			selection4 = image ;
+			selection5 = image ;
+			selection6 = image ;
+			selection7 = image ;
+			selection8 = image ;
+			selection9 = image ;
+			selection10 = image ;
+			selection11 = image ;
+			selection12 = image ;
+			selection13 = image ;
+			selection14 = image ;
+			selection15 = image ;
+			selection16 = image ;
+			choice01 = "" ;
+			choice02 = "" ;
+			choice03 = "" ;
+			choice04 = "" ;
+			
+			function display()	{ 
+			myElement = document.getElementById ("Appetizer1") ;
+			myElement.src = selection ;
+			myElement = document.getElementById ("Appetizer2") ;
+			myElement.src = selection2 ;
+			myElement = document.getElementById ("Appetizer3") ;
+			myElement.src = selection3 ;
+			myElement = document.getElementById ("Appetizer4") ;
+			myElement.src = selection4 ;
+			myElement = document.getElementById ("Soup1") ;
+			myElement.src = selection5 ;
+			myElement = document.getElementById ("Soup2") ;
+			myElement.src = selection6 ;
+			myElement = document.getElementById ("Soup3") ;
+			myElement.src = selection7 ;
+			myElement = document.getElementById ("Soup4") ;
+			myElement.src = selection8 ;
+			myElement = document.getElementById ("Entree1") ;
+			myElement.src = selection9 ;
+			myElement = document.getElementById ("Entree2") ;
+			myElement.src = selection10 ;
+			myElement = document.getElementById ("Entree3") ;
+			myElement.src = selection11 ;
+			myElement = document.getElementById ("Entree4") ;
+			myElement.src = selection12 ;
+			myElement = document.getElementById ("Dessert1") ;
+			myElement.src = selection13 ;
+			myElement = document.getElementById ("Dessert2") ;
+			myElement.src = selection14 ;
+			myElement = document.getElementById ("Dessert3") ;
+			myElement.src = selection15 ;
+			myElement = document.getElementById ("Dessert4") ;
+			myElement.src = selection16 ;
+			myElement = document.getElementById ("confirm") ;
+			myElement.style.display = "none" ; }
+			
+			function showchoices()	{ 
+			myElement = document.getElementById ("choice1") ;
+			myElement.innerHTML = choice01 ;
+			myElement = document.getElementById ("choice2") ;
+			myElement.innerHTML = choice02 ;
+			myElement = document.getElementById ("choice3") ;
+			myElement.innerHTML = choice03 ;
+			myElement = document.getElementById ("choice4") ;
+			myElement.innerHTML = choice04 ; }
+			
+			function resetchoices()	{ 
+			choice01 = "" ;
+			choice02 = "" ;
+			choice03 = "" ;
+			choice04 = "" ; }
+			
+			function resetappetizer() { 
+			choice01 = "" ;
+			selection = image ;
+			selection2 = image ;
+			selection3 = image ;
+			selection4 = image ; }
+			
+			function resetsoup() { 
+			choice02 = "" ;
+			selection5 = image ;
+			selection6 = image ;
+			selection7 = image ;
+			selection8 = image ; }
+			
+			function resetentree()	{ 
+			choice03 = "" ;
+			selection9 = image ;
+			selection10 = image ;
+			selection11 = image ;
+			selection12 = image ; }
+			
+			function resetdessert()	{ 
+			choice04 = "" ;
+			selection13 = image ;
+			selection14 = image ;
+			selection15 = image ;
+			selection16 = image ; }
+			
+			function disableappetizer()	{ 
+			document.getElementById("Appetizer10").disabled = true ;
+			document.getElementById("Appetizer20").disabled = true ;
+			document.getElementById("Appetizer30").disabled = true ;
+			document.getElementById("Appetizer40").disabled = true ; }
+			
+			function disablesoup()	{ 
+			document.getElementById("Soup10").disabled = true ;
+			document.getElementById("Soup20").disabled = true ;
+			document.getElementById("Soup30").disabled = true ;
+			document.getElementById("Soup40").disabled = true ; }
+			
+			function disableentree() { 
+			document.getElementById("Entree10").disabled = true ;
+			document.getElementById("Entree20").disabled = true ;
+			document.getElementById("Entree30").disabled = true ;
+			document.getElementById("Entree40").disabled = true ; }
+			
+			function disabledessert() { 
+			document.getElementById("Dessert10").disabled = true ;
+			document.getElementById("Dessert20").disabled = true ;
+			document.getElementById("Dessert30").disabled = true ;
+			document.getElementById("Dessert40").disabled = true ; }
+			
+			function enableappetizer()	{ 
+			document.getElementById("Appetizer10").disabled = false ;
+			document.getElementById("Appetizer20").disabled = false ;
+			document.getElementById("Appetizer30").disabled = false ;
+			document.getElementById("Appetizer40").disabled = false ; }
+			
+			function enablesoup() { 
+			document.getElementById("Soup10").disabled = false ;
+			document.getElementById("Soup20").disabled = false ;
+			document.getElementById("Soup30").disabled = false ;
+			document.getElementById("Soup40").disabled = false ; }
+			
+			function enableentree()	{ 
+			document.getElementById("Entree10").disabled = false ;
+			document.getElementById("Entree20").disabled = false ;
+			document.getElementById("Entree30").disabled = false ;
+			document.getElementById("Entree40").disabled = false ; }
+			
+			function enabledessert(){ 
+			document.getElementById("Dessert10").disabled = false ;
+			document.getElementById("Dessert20").disabled = false ;
+			document.getElementById("Dessert30").disabled = false ;
+			document.getElementById("Dessert40").disabled = false ; }
+			
+			function hidemealcard()	{ 
+			myElement = document.getElementById("submit") ;
+			myElement.style.display = "none" ;
+			myElement = document.getElementById ("confirm") ;
+			myElement.style.display = "block" ; }
+			
+			function resetall() {
+			resetsoup() ;
+			resetappetizer() ;
+			resetentree() ;
+			resetdessert() ; }
+			
+			function enableall() {
+			enablesoup() ;
+			enableappetizer() ;
+			enableentree() ;
+			enabledessert() ; }
+			
+		</script>
+		<style type="text/css">
+			h6 { font-size:25pt ; }
+			h5 { font-size:25pt ; }
+			body>div>img { position:fixed ; top:0px ; left:0px ; width:100% ; height:100% ; z-index:-1 ; }
+			body { font-family: Century Gothic ; margin-left:5% ; }
+			button { background: transparent ; border:transparent ; font-size: 25pt ; }
+			button:hover { cursor:url('fork.cur'), default ; }
+			span { border:solid black thick ; border-radius: 5px ; background-color:tan ; }
+			div { font-family: Constantia ; font-size:40pt ; }
+			img#burger { max-width:95% ; }
+		</style>
+	</head>
+	<body>
+		<div><img src = "parchment.jpg" /></div>
+		<h6 id = "submit">
+			<div>Please Select One Food From Each Category</div>
+			<dl>
+				<dt>Appetizers</dt>
+				<dd><button id = "Appetizer10" onclick = "selection = image2 ; display() ; disableappetizer() ; choice01 = 'French Fries' ;"><img id = "Appetizer1" src = "" /></button>French Fries</dd>
+				<dd><button id = "Appetizer20" onclick = "selection2 = image2 ; display() ; disableappetizer() ; choice01 = 'Chicken McNuggets' ;"><img id = "Appetizer2" src = "" /></button>Chicken McNuggets</dd>
+				<dd><button id = "Appetizer30" onclick = "selection3 = image2 ; display() ; disableappetizer() ; choice01 = 'Mac Snack Wrap' ;"><img id = "Appetizer3" src = "" /></button>Mac Snack Wrap</dd>
+				<dd><button id = "Appetizer40" onclick = "selection4 = image2 ; display() ; disableappetizer() ; choice01 = 'Bacon Ranch Salad' ;"><img id = "Appetizer4" src = "" /></button>Bacon Ranch Salad</dd>
+				<dd><span><button onclick = "resetappetizer() ; display() ; enableappetizer() ;" >RESET</button></span></dd>
+			</dl>
+			<dl>
+				<dt>Soups</dt>
+				<dd><button id = "Soup10" onclick = "selection5 = image2 ; display() ; disablesoup() ; choice02 = 'Ketchup Soup' ;"><img id = "Soup1" src = "" /></button>Ketchup Soup</dd>
+				<dd><button id = "Soup20" onclick = "selection6 = image2 ; display() ; disablesoup() ; choice02 = 'Honey Mustard Soup' ;"><img id = "Soup2" src = "" /></button>Honey Mustard Soup</dd>
+				<dd><button id = "Soup30" onclick = "selection7 = image2 ; display() ; disablesoup() ; choice02 = 'Barbecue Sauce Soup' ;"><img id = "Soup3" src = "" /></button>Barbecue Sauce Soup</dd>
+				<dd><button id = "Soup40"  onclick = "selection8 = image2 ; display() ; disablesoup() ; choice02 = 'Spicy Mustard Soup' ;"><img id = "Soup4" src = "" /></button>Spicy Mustard Soup</dd>
+				<dd><span><button onclick = "resetsoup() ; display() ; enablesoup() ;" >RESET</button></span></dd>
+			</dl>
+			<dl>
+				<dt>Entrees</dt>
+				<dd><button id = "Entree10" onclick = "selection9 = image2 ; display() ; disableentree() ; choice03 = 'Big Mac' ;"><img id = "Entree1" src = "" /></button>Big Mac</dd>
+				<dd><button id = "Entree20" onclick = "selection10 = image2 ; display() ; disableentree() ; choice03 = 'Bacon Clubhouse Burger' ;"><img id = "Entree2" src = "" /></button>Bacon Clubhouse Burger</dd>
+				<dd><button id = "Entree30" onclick = "selection11 = image2 ; display() ; disableentree() ; choice03 = 'Barbecue Ranch Burger' ;"><img id = "Entree3" src = "" /></button>Barbecue Ranch Burger</dd>
+				<dd><button id = "Entree40" onclick = "selection12 = image2 ; display() ; disableentree() ; choice03 = 'Bacon McDouble' ;"><img id = "Entree4" src = "" /></button>Bacon McDouble</dd>
+				<dd><span><button onclick = "resetentree() ; display() ; enableentree() ;" >RESET</button></span></dd>
+			</dl>
+			<dl>
+				<dt>Desserts</dt>
+				<dd><button id = "Dessert10" onclick = "selection13 = image2 ; display() ; disabledessert() ; choice04 = 'Baked Apple Pie' ;"><img id = "Dessert1" src = "" /></button>Baked Apple Pie</dd>
+				<dd><button id = "Dessert20" onclick = "selection14 = image2 ; display() ; disabledessert() ; choice04 = 'McFlurry' ;"><img id = "Dessert2" src = "" /></button>McFlurry</dd>
+				<dd><button id = "Dessert30" onclick = "selection15 = image2 ; display() ; disabledessert() ; choice04 = 'Soft Baked Cookie' ;"><img id = "Dessert3" src = "" /></button>Soft Baked Cookie</dd>
+				<dd><button id = "Dessert40" onclick = "selection16 = image2 ; display() ; disabledessert() ; choice04 = 'Hot Fudge Sundae' ;"><img id = "Dessert4" src = "" /></button>Hot Fudge Sundae</dd>
+				<dd><span><button onclick = "resetdessert() ; display() ;enabledessert() ;" >RESET</button></span></dd>
+			</dl>
+			<br />
+			<hr />
+			<br />
+			<span><button onclick = "resetall() ; enableall() ; resetchoices() ; display() ;">RESET ALL SELECTIONS</button></span>
+			<br />
+			<br />
+			<span><button onclick = "hidemealcard() ; showchoices() ;">Finalize Selections</button></span>
+		</h6>
+		<h5 id = "confirm">
+			Thank You <br />
+			Your Selections Have Been Received
+			<br />
+			<dl>
+				<dt>Your Choices Were:</dt>
+				<dd id = "choice1"><dd>
+				<dd id = "choice2"><dd>
+				<dd id = "choice3"><dd>
+				<dd id = "choice4"><dd>
+			</dl>
+			<br />
+			Enjoy Your Meal
+			<br />
+			<img id = "burger" src = "burgers.png" />
+		</h5>
+		<script type="text/javascript">
+			display()
+		</script>
+	</body>
+</html>
